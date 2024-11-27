@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Log de Atividade</title>
+    <link rel="stylesheet" href="log.css">
+</head>
+<body>
+    
+    <div id="login">
+        <div class="caixa">
+            <h1>Log de Atividade</h1>
+
+            <div class="atividade-input">
+                <input type="text" id="descricao" placeholder="Descrição da atividade" required>
+                <input type="datetime-local" id="dataHora" required>
+                <button id="addActivity">Adicionar Atividade</button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Hora</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody id="activityTableBody">
+                    <!-- As atividades serão adicionadas aqui -->
+                </tbody>
+            </table>
+
+            <div class="entrar">
+                <a href="../menu.html/menu.html">Menu Principal</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="log.js"></script> <!-- Link para o arquivo JavaScript -->
+</body>
+</html>

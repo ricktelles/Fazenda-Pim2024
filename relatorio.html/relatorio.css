@@ -1,0 +1,142 @@
+/* ================== ESTILOS GERAIS ================== */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0f0c25;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: beige;
+    margin-bottom: 20px;
+}
+
+/* ================== CAIXA DE BUSCA E BOTÃO ================== */
+.caixa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search {
+    width: 250px;
+    height: 40px;
+    padding-left: 15px;
+    border: none;
+    border-radius: 15px;
+    background-color: #1e1e1e;
+    color: #b6b6b6;
+    margin-right: 10px;
+}
+
+.search::placeholder {
+    color: rgb(227, 227, 227);
+}
+
+.search:focus {
+    outline: none;
+}
+
+.filter {
+    width: 115px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(134, 243, 134);
+    color: black;
+}
+
+/* ================== TABELA ================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+}
+
+th {
+    background-color: #1e1e1e;
+}
+
+tr:hover {
+    background-color: #2e2e2e;
+}
+
+/* ================== LINKS ================== */
+a {
+    display: inline-block;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: aquamarine;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* ================== RESPONSIVIDADE ================== */
+/* Estilos para tablets (largura até 768px) */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .caixa {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search, .filter {
+        width: 100%;
+        height: 35px;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    table {
+        display: block; /* Tabela rolável */
+        overflow-x: auto;
+        width: 100%;
+    }
+
+    th, td {
+        min-width: 120px; /* Largura mínima para colunas */
+        font-size: 14px;
+    }
+}
+
+/* Estilos para celulares (largura até 480px) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .search, .filter {
+        height: 35px;
+        width: 100%;
+    }
+
+    th, td {
+        font-size: 12px;
+    }
+}

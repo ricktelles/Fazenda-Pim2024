@@ -1,0 +1,66 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0f0c25;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: aquamarine;
+}
+
+#login {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.atividade-input {
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="datetime-local"] {
+    border-radius: 15px;
+    border: none;
+    width: 200px;
+    height: 40px;
+    padding-left: 15px;
+    background-color: #1e1e1e;
+    color: #b6b6b6;
+    margin-right: 10px;
+}
+
+button {
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(134, 243, 134);
+    color: black;
+    height: 40px;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #b6b6b6;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #1e1e1e;
+}
+
+tr:nth-child(even) {
+    background-color: #2e2e2e;
+}
+
+.entrar {
+    margin-top: 20px;
+}

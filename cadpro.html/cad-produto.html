@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadpro.css"> <!-- Link para o arquivo CSS -->
+    <title>Cadastro de Produto</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Produto</h1> <!-- Título da página -->
+        <div class="caixa">
+            <form id="cadastro-produto">
+                <div class="name">
+                    <input type="text" id="nome-produto" name="nome-produto" placeholder="Nome do Produto" required> <!-- Campo para nome do produto -->
+                </div>
+                <div class="quantidade">
+                    <input type="number" id="quantidade" name="quantidade" placeholder="Quantidade" required> <!-- Campo para quantidade -->
+                </div>
+                <div class="qualidade">
+                    <input type="text" id="qualidade" name="qualidade" placeholder="Qualidade" required> <!-- Campo para qualidade -->
+                </div>
+                <div class="categoria">
+                    <input type="text" id="categoria" name="categoria" placeholder="Categoria" required> <!-- Campo para categoria -->
+                </div>
+                <div class="data-colheita">
+                    <input type="date" id="data-colheita" name="data-colheita" required> <!-- Campo para data da colheita -->
+                </div>
+                <div class="destino">
+                    <input type="text" id="destino" name="destino" placeholder="Destino" required> <!-- Campo para destino -->
+                </div>
+                <div class="fornecedor">
+                    <select id="fornecedor" name="fornecedor" required> <!-- Combobox para fornecedores -->
+                        <option value="">Selecione o Fornecedor</option>
+                        <!-- As opções serão carregadas dinamicamente via JS -->
+                    </select>
+                    <p><a href="../menu.html/menu.html">Menu Principal</a></p>
+                </div>
+                <div class="buttons">
+                    <input type="submit" value="Adicionar Produto" class="btn verde"> <!-- Botão verde para adicionar produto -->
+                    <input type="button" value="Adicionar Categoria" class="btn laranja" id="adicionar-categoria"> <!-- Botão laranja para adicionar categoria -->
+                    <input type="button" value="Limpar Campos" class="btn vermelho" id="limpar-campos"> <!-- Botão vermelho para limpar campos -->
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="cadpro.js"></script> <!-- Link para o arquivo JavaScript -->
+</body>
+</html>

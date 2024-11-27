@@ -1,0 +1,123 @@
+/* Estilo base */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0f0c25;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: aquamarine;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ocupa toda a largura */
+    max-width: 400px; /* Limite máximo */
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 5vh; /* Ajusta a margem superior com uma unidade relativa */
+}
+
+.name input,
+.email input,
+.endereco input,
+.tipo-produto input {
+    border-radius: 15px;
+    border: none;
+    width: 100%; /* Ocupa toda a largura disponível */
+    max-width: 300px; /* Define um limite para telas maiores */
+    height: 40px;
+    padding-left: 15px;
+    background-color: #1e1e1e;
+    color: #b6b6b6;
+    margin-bottom: 15px;
+}
+
+.entrar input {
+    cursor: pointer;
+    width: 100%; /* Ocupa toda a largura */
+    max-width: 150px; /* Define um limite para telas maiores */
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(134, 243, 134);
+    color: black;
+}
+
+input::placeholder {
+    color: rgb(227, 227, 227);
+}
+
+h1 {
+    color: beige;
+    font-size: 1.8rem; /* Ajusta o tamanho do título */
+    margin-bottom: 20px;
+}
+
+.caixa {
+    margin-top: 30px;
+    text-align: center;
+}
+
+input:focus {
+    outline: none;
+}
+
+/* Regras de mídia para responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .name input,
+    .email input,
+    .endereco input,
+    .tipo-produto input {
+        max-width: 100%; /* Remove o limite para telas menores */
+    }
+
+    .entrar input {
+        max-width: 100%; /* Botão ocupa toda a largura */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem; /* Reduz o título para telas menores */
+    }
+
+    .container {
+        margin-top: 20px;
+    }
+
+    .entrar input {
+        height: 35px; /* Botão um pouco menor */
+        margin-top: 20px; /* Adiciona espaçamento superior no botão */
+    }
+}
+
+@media (max-width: 320px) {
+    .name input,
+    .email input,
+    .endereco input,
+    .tipo-produto input,
+    .entrar input {
+        max-width: 100%; /* Permite que ocupe toda a largura */
+    }
+
+    h1 {
+        font-size: 1.3rem; /* Ajusta o tamanho da fonte do título para telas muito pequenas */
+    }
+}

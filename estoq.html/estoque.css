@@ -1,0 +1,200 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0f0c25;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container principal */
+.container {
+    background-color: #0f0c25;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    width: 90%;
+    max-width: 900px;
+}
+a {
+    display: inline-block;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: aquamarine;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Título */
+h1 {
+    color: #e4e4e4;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+}
+
+/* Contêiner da tabela */
+.table-container {
+    overflow-x: auto; /* Permite rolagem horizontal */
+    margin-top: 15px;
+}
+
+/* Estilo da tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #1c1836;
+}
+
+th {
+    background-color: #1c1836;
+    color: #fff;
+    font-size: 1rem;
+}
+
+td {
+    background-color: #1c1836;
+    color: #bbb;
+    font-size: 0.9rem;
+}
+
+td:hover {
+    background-color: #252043;
+}
+
+/* Coluna de Ações */
+th:last-child, td:last-child {
+    text-align: center;
+}
+
+/* Botões de ação */
+.btn-action {
+    background: linear-gradient(145deg, #4CAF50, #388E3C);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 0.9rem;
+    border: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-action:hover {
+    background: linear-gradient(145deg, #388E3C, #4CAF50);
+    transform: scale(1.05);
+}
+
+.btn-action:active {
+    transform: scale(0.95);
+}
+
+/* Modal */
+#modal-venda {
+    display: none; /* Inicialmente oculto */
+    position: fixed; /* Fixa a posição do modal na tela */
+    top: 50%; /* Centraliza o modal na tela */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Realiza o ajuste fino para centralizar */
+    width: 80%; /* Ajuste o tamanho conforme necessário */
+    max-width: 600px; /* Ajuste o tamanho máximo */
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
+    z-index: 1000; /* Garante que o modal fique sobre os outros conteúdos */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos do conteúdo dentro do modal */
+#modal-venda div {
+    background-color: #1c1836;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Estilo dos inputs e botões dentro do modal */
+#modal-venda form input, 
+#modal-venda form select, 
+#modal-venda form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+}
+
+.modal button {
+    background: linear-gradient(145deg, #4CAF50, #388E3C);
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.modal button:hover {
+    background: linear-gradient(145deg, #388E3C, #4CAF50);
+    transform: scale(1.05);
+}
+
+.modal button:active {
+    transform: scale(0.95);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 800px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    th, td {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Estilos para telas pequenas */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    th, td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .btn-action {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    /* Ajusta a tabela para rolagem horizontal em telas menores */
+    .table-container {
+        overflow-x: scroll;
+    }
+}

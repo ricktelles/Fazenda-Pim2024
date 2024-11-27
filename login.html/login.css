@@ -1,0 +1,112 @@
+/* Estilo base */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0f0c25;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column; /* Empilhar conteúdo verticalmente */
+}
+
+a {
+    text-decoration: none;
+    color: aquamarine;
+}
+
+#login {
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Empilha os elementos para melhor responsividade */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px; /* Limita o tamanho máximo */
+    box-sizing: border-box;
+}
+
+.name input,
+.email input,
+.senha input {
+    border-radius: 15px;
+    border: none;
+    width: 100%; /* Ocupa a largura total do contêiner */
+    max-width: 250px; /* Define um limite para telas maiores */
+    height: 40px;
+    padding-left: 15px;
+    background-color: #1e1e1e;
+    color: #b6b6b6;
+    margin-bottom: 15px;
+}
+
+.entrar input {
+    cursor: pointer;
+    width: 100%; /* Ocupa a largura total */
+    max-width: 150px; /* Define um limite */
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(134, 243, 134);
+    color: black;
+}
+
+input::placeholder {
+    color: rgb(227, 227, 227);
+}
+
+h1 {
+    color: beige;
+    font-size: 1.8rem; /* Ajusta o tamanho do título */
+    text-align: center;
+}
+
+.caixa {
+    margin-top: 40px; /* Ajusta para menos espaçamento */
+    text-align: center;
+}
+
+.caixa img {
+    width: 100%; /* Imagem se ajusta ao contêiner */
+    max-width: 150px; /* Define um limite para telas maiores */
+    height: auto;
+}
+
+input:focus {
+    outline: none;
+}
+
+/* Regras de responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .name input,
+    .email input,
+    .senha input,
+    .entrar input {
+        max-width: 100%; /* Remove o limite fixo para telas menores */
+    }
+
+    .caixa img {
+        max-width: 120px; /* Reduz o tamanho da imagem em telas menores */
+    }
+
+    .entrar input {
+        max-width: 100%; /* Botão ocupa toda a largura do contêiner */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.3rem; /* Título menor para telas muito pequenas */
+    }
+
+    .caixa img {
+        max-width: 100px; /* Imagem menor */
+    }
+}

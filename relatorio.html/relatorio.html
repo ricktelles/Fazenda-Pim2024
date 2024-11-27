@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="relatorio.css">
+    <title>Relatório de Vendas</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Relatório de Vendas</h1>
+        <div class="caixa">
+            <input type="text" class="search" placeholder="Buscar relatório...">
+            <button class="filter">Filtrar</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Produto</th>
+                    <th>Quantidade</th>
+                    <th>Preço</th>
+                    <th>Data</th>
+                    <th>Pagamento</th>
+                </tr>
+            </thead>
+            <tbody id="reportTable">
+                <!-- A tabela será preenchida dinamicamente -->
+            </tbody>
+        </table>
+        <p><a href="../menu.html/menu.html">Menu Principal</a></p>
+    </div>
+    <script src="relatorio.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estoque.css">
+    <title>Estoque de Produtos</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Estoque de Produtos</h1>
+        <div class="table-container">
+            <p><a href="../menu.html/menu.html">Menu Principal</a></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Produto</th>
+                        <th>Quantidade</th>
+                        <th>Qualidade</th>
+                        <th>Categoria</th>
+                        <th>Data da Colheita</th>
+                        <th>Destino</th>
+                        <th>Fornecedor</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Linhas de produtos serão geradas aqui pelo JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal para mostrar os detalhes da venda -->
+    <div id="modal-venda" style="display:none;">
+        <div>
+            <p id="produto-selecionado"></p>
+            <form id="form-venda">
+                <!-- Campo oculto para armazenar o IdProduto -->
+                <input type="hidden" id="idProduto" name="idProduto">
+
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" id="quantidade" name="quantidade" required />
+                
+                <label for="precoUnitario">Preço Unitário:</label>
+                <input type="number" id="precoUnitario" name="precoUnitario" required />
+    
+                <label for="metodoPagamento">Método de Pagamento:</label>
+                <select id="metodoPagamento" name="metodoPagamento">
+                    <option value="Cartão">Cartão</option>
+                    <option value="Dinheiro">Dinheiro</option>
+                </select>
+    
+                <button type="button" onclick="venderProduto()">Vender</button>
+                <button type="button" onclick="fecharModalVenda()">Fechar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal para editar os detalhes do produto -->
+    <div id="modal-editar" style="display:none;">
+        <form id="form-editar">
+            <h3>Editar Produto</h3>
+            
+            <!-- Campo Hidden para o ID do Produto -->
+            <input type="hidden" id="editar-idProduto">
+            
+            <!-- Campo para o Nome do Produto -->
+            <label for="editar-nomeProduto">Nome do Produto:</label>
+            <input type="text" id="editar-nomeProduto" required>
+            
+            <!-- Campo para a Quantidade do Produto -->
+            <label for="editar-quantidadeProduto">Quantidade:</label>
+            <input type="number" id="editar-quantidadeProduto" required>
+            
+            <!-- Campo para a Qualidade do Produto -->
+            <label for="editar-qualidadeProduto">Qualidade:</label>
+            <input type="text" id="editar-qualidadeProduto" required>
+            
+            <!-- Campo para a Categoria do Produto -->
+            <label for="editar-categoriaProduto">Categoria:</label>
+            <input type="text" id="editar-categoriaProduto" required>
+            
+            <!-- Campo para a Data de Colheita -->
+            <label for="editar-dataColheita">Data de Colheita:</label>
+            <input type="date" id="editar-dataColheita" required>
+            
+            <!-- Campo para o Destino do Produto -->
+            <label for="editar-destinoProduto">Destino:</label>
+            <input type="text" id="editar-destinoProduto" required>
+            
+            <!-- Campo para o Nome do Fornecedor -->
+            <label for="editar-fornecedorProduto">Fornecedor:</label>
+            <input type="text" id="editar-fornecedorProduto" required>
+            
+            <button type="button" onclick="atualizarProduto()">Atualizar</button>
+            <button type="button" onclick="fecharModal()">Cancelar</button>
+        </form>
+    </div>
+</div>
+    <script src="app.js"></script>
+</body>
+</html>
